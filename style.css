@@ -4,64 +4,78 @@ body {
   text-align: center;
 }
 
-h1 {
-  color: #2c3e50;
-}
-body {
-  background-color: #f5f5f5;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 2rem;
+/* From Uiverse.io by seyed-mohsen-mousavi */ 
+/* level settings 👇 */
+
+.slider {
+  /* slider */
+  --slider-width: 100%;
+  --slider-height: 50px;
+  --slider-bg: rgb(82, 82, 82);
+  --slider-border-radius: 9px;
+  /* level */
+  --level-color: #fff;
+  --level-transition-duration: 0.1s;
+  /* icon */
+  --icon-margin: 15px;
+  --icon-color: var(--slider-bg);
+  --icon-size: 25px;
 }
 
-/* Style the slider wrapper */
 .slider {
   position: relative;
-  width: 250px;
-  height: 60px;
-  margin: 50px auto;
-  display: flex;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
 }
 
-/* Style the range input */
-.slider input[type="range"] {
-  width: 100%;
-  cursor: pointer;
+.slider .volume {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--icon-margin);
+  color: var(--icon-color);
+  width: var(--icon-size);
+  height: auto;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+}
+
+.slider .level {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  height: 5px;
-  border-radius: 5px;
-  background: linear-gradient(to right, #4caf50, #81c784);
-  outline: none;
-  margin-right: 10px;
+  width: var(--slider-width);
+  height: var(--slider-height);
+  background: var(--slider-bg);
+  overflow: hidden;
+  border-radius: var(--slider-border-radius);
+  -webkit-transition: height var(--level-transition-duration);
+  -o-transition: height var(--level-transition-duration);
+  transition: height var(--level-transition-duration);
+  cursor: inherit;
+  transform: rotate(270deg);
 }
 
-.slider input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #4caf50;
-  cursor: pointer;
+.slider .level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+.slider .level::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border-radius: 0;
   border: none;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
-
-.slider input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #4caf50;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
-
-/* Style the volume SVG */
-.volume {
-  width: 24px;
-  height: 24px;
-  color: #333;
-  margin-left: 10px;
+  box-shadow: -200px 0 0 200px var(--level-color);
 }
