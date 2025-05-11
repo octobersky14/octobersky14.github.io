@@ -22,6 +22,23 @@
         text-align: center;
       }
 
+      /* Cards container */
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Individual card */
+      .card {
+        flex: 0 1 350px;
+        margin: 0;
+      }
+
       /* Slider container */
       .slider-container {
         position: fixed;
@@ -83,42 +100,105 @@
     <!-- Main Content -->
     <div class="main-content">
       <h1>Christopher Inkum</h1>
-      <p>This is styled with an external CSS file.</p>
-      <div class="card">
-        <div class="content">
-          <div class="back">
-            <div class="back-content">
-  <svg
-    stroke="#ffffff"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    height="50px"
-    width="50px"
-    fill="#ffffff"
-  >
-    <path d="M8.293 6.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L13.586 13 8.293 7.707a1 1 0 0 1 0-1.414z"/>
-  </svg>
-  <strong>Frog Maze</strong>
-</div>
-          </div>
-          <div class="front">
-           
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemtxOTJ4eWdrOWluNm9xcjJ6Nm1qYmdhamt2NW5rOXN4YWJ2ZGl2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TgChG0m8KSXr3obicS/giphy.gif" alt="Frog Maze gameplay" class="game-gif" />
-  <div class="front-content">
-    <small class="badge">Frog Maze</small>
-    <div class="description">
-      <div class="title">
-        <p class="title"><strong>Frog Maze</strong></p>
-        <!-- Keep your SVG icon here if you like -->
-      </div>
-      <p class="card-footer">30 Mins &nbsp; | &nbsp; 1 Serving</p>
-    </div>
-  </div>
-</div>
+      <p>Here are a couple of projects I've worked on :) </p>
 
+      <!-- Cards Container -->
+      <div class="cards-container">
+        <!-- Frog Maze Card -->
+        <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <svg
+                  stroke="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  height="50px"
+                  width="50px"
+                  fill="#ffffff"
+                >
+                  <path
+                    d="M8.293 6.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L13.586 13 8.293 7.707a1 1 0 0 1 0-1.414z"
+                  />
+                </svg>
+                <strong>Frog Maze</strong>
+              </div>
+            </div>
+            <div class="front">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemtxOTJ4eWdrOWluNm9xcjJ6Nm1qYmdhamt2NW5rOXN4YWJ2ZGl2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TgChG0m8KSXr3obicS/giphy.gif"
+                alt="Frog Maze gameplay"
+                class="game-gif"
+              />
+              <div class="front-content">
+                <small class="badge">Frog Maze</small>
+                <div class="description">
+                  <div class="title">
+                    <p class="title"><strong>Frog Maze</strong></p>
+                  </div>
+                  <p class="card-footer">30 Mins &nbsp; | &nbsp; 1 Serving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redlining Zones Map Card -->
+        <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <svg
+                  stroke="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  height="50px"
+                  width="50px"
+                  fill="#ffffff"
+                >
+                  <path
+                    d="M8.293 6.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L13.586 13 8.293 7.707a1 1 0 0 1 0-1.414z"
+                  />
+                </svg>
+                <strong>Redlining Zones Map</strong>
+              </div>
+            </div>
+            <div class="front">
+              <img
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2hhN2Y2OWtma2E5YzByMDI2enE5c29xaGcyd2pmbW9xNWNyb2NtMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R4pSKMpQhYpuplRorF/giphy.gif"
+                alt="Redlining Zones Map preview"
+                class="game-gif"
+              />
+              <div class="front-content">
+                <small class="badge">Redlining Zones Map</small>
+                <div class="description">
+                  <div class="title">
+                    <p class="title">
+                      <strong>Redlining Zones Map</strong>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="20px"
+                        height="20px"
+                        fill="currentColor"
+                        style="margin-left: 8px; vertical-align: middle"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                        />
+                      </svg>
+                    </p>
+                  </div>
+                  <p class="card-footer">
+                    Interactive Map &nbsp; | &nbsp; Historical Data
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
     <script>
       const slider = document.querySelector(".level");
@@ -127,15 +207,13 @@
 
       slider.addEventListener("input", (event) => {
         const value = parseInt(event.target.value);
-        const translateY = 100 - value; // Calculate percentage for transform
+        const translateY = 100 - value;
 
-        // Smoothly move content up based on slider value
         mainContent.style.transform = `translateY(${translateY}vh)`;
         mainContent.style.opacity = value / 100;
 
         if (value === 100) {
           mainContent.classList.add("revealed");
-          // Hide the slider container after a short delay
           setTimeout(() => {
             sliderContainer.classList.add("hidden");
           }, 500);
