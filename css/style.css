@@ -1,11 +1,22 @@
 /* Add at the top of your existing CSS */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+/* Replace the existing font import with these */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
 
 body {
   background-color: #2e2e2e;
-  font-family: 'JetBrains Mono', monospace;  /* Updated font */
+  font-family: 'Outfit', sans-serif;  /* Updated body font */
   text-align: center;
   color: #fff;
+}
+
+h1, h2, h3, p, .nav-links a {
+  font-family: 'Space Grotesk', sans-serif;  /* Modern tech-focused font for headings */
+  font-weight: 500;
+}
+
+.card .back-content strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
 }
 
 .slider-container {
