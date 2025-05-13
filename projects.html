@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects - Christopher Inkum</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content revealed">
+      <h1>Christopher Inkum</h1>
+      <p>Here are a couple of projects I've worked on :) </p>
+
+      <!-- Cards Container -->
+      
+      
+    </div>
+
+    <script>
+      const slider = document.querySelector(".level");
+      const mainContent = document.querySelector(".main-content");
+      const sliderContainer = document.querySelector(".slider-container");
+
+      slider.addEventListener("input", (event) => {
+        const value = parseInt(event.target.value);
+        const translateY = 100 - value;
+
+        mainContent.style.transform = `translateY(${translateY}vh)`;
+        mainContent.style.opacity = value / 100;
+
+        if (value === 100) {
+          mainContent.classList.add("revealed");
+          setTimeout(() => {
+            sliderContainer.classList.add("hidden");
+          }, 500);
+        } else {
+          mainContent.classList.remove("revealed");
+          sliderContainer.classList.remove("hidden");
+        }
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

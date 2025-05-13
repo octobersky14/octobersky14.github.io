@@ -1,110 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Site</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        overflow-x: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Main content container */
-      .main-content {
-        opacity: 0;
-        transform: translateY(100vh);
-        transition: all 0.5s ease;
-        padding: 20px;
-        text-align: center;
-      }
-
-      /* Cards container */
-      .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      /* Individual card */
-      .card {
-        flex: 0 1 350px;
-        margin: 0;
-      }
-
-      /* Slider container */
-      .slider-container {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        padding: 20px;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
-      }
-
-      /* Hidden slider state */
-      .slider-container.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      /* When content is revealed */
-      .main-content.revealed {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
+    <title>Christopher Inkum</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="music.html">Music</a></li>
+        
+      </ul>
+    </nav>
+
     <!-- Slider Section -->
     <div class="slider-container">
       <label class="slider">
         <input type="range" class="level" min="0" max="100" />
-        <svg
-          class="volume"
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="512"
-          height="512"
-          x="0"
-          y="0"
-          viewBox="0 0 24 24"
-          style="enable-background: new 0 0 512 512"
-          xml:space="preserve"
-        >
+        <svg class="volume" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background: new 0 0 512 512" xml:space="preserve">
           <g>
-            <path
-              d="M18.36 19.36a1 1 0 0 1-.705-1.71C19.167 16.148 20 14.142 20 12s-.833-4.148-2.345-5.65a1 1 0 1 1 1.41-1.419C20.958 6.812 22 9.322 22 12s-1.042 5.188-2.935 7.069a.997.997 0 0 1-.705.291z"
-              fill="currentColor"
-              data-original="#000000"
-            ></path>
-            <path
-              d="M15.53 16.53a.999.999 0 0 1-.703-1.711C15.572 14.082 16 13.054 16 12s-.428-2.082-1.173-2.819a1 1 0 1 1 1.406-1.422A6 6 0 0 1 18 12a6 6 0 0 1-1.767 4.241.996.996 0 0 1-.703.289zM12 22a1 1 0 0 1-.707-.293L6.586 17H4c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h2.586l4.707-4.707A.998.998 0 0 1 13 3v18a1 1 0 0 1-1 1z"
-              fill="currentColor"
-              data-original="#000000"
-            ></path>
+            <path d="M18.36 19.36a1 1 0 0 1-.705-1.71C19.167 16.148 20 14.142 20 12s-.833-4.148-2.345-5.65a1 1 0 1 1 1.41-1.419C20.958 6.812 22 9.322 22 12s-1.042 5.188-2.935 7.069a.997.997 0 0 1-.705.291z" fill="currentColor" data-original="#000000"></path>
+            <path d="M15.53 16.53a.999.999 0 0 1-.703-1.711C15.572 14.082 16 13.054 16 12s-.428-2.082-1.173-2.819a1 1 0 1 1 1.406-1.422A6 6 0 0 1 18 12a6 6 0 0 1-1.767 4.241.996.996 0 0 1-.703.289zM12 22a1 1 0 0 1-.707-.293L6.586 17H4c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h2.586l4.707-4.707A.998.998 0 0 1 13 3v18a1 1 0 0 1-1 1z" fill="currentColor" data-original="#000000"></path>
           </g>
         </svg>
       </label>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
       <h1>Christopher Inkum</h1>
-      <p>Here are a couple of projects I've worked on :) </p>
-
-      <!-- Cards Container -->
+      <p>Welcome to my portfolio! It is still a work in progress, but I find it important to include all stages of the process :) </p>
+      
+      <!-- Projects Section -->
       <div class="cards-container">
-        <!-- Frog Maze Card -->
+        <a href="https://github.com/cs0320-s25/term-project-ccaf" target="_blank" class="card-link">
         <div class="card">
           <div class="content">
             <div class="back">
@@ -121,20 +51,20 @@
                     d="M8.293 6.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L13.586 13 8.293 7.707a1 1 0 0 1 0-1.414z"
                   />
                 </svg>
-                <strong>Frog Maze</strong>
+                <strong>Personalized Recommender for eBay, Poshmark, and Depop</strong>
               </div>
             </div>
             <div class="front">
               <img
-                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemtxOTJ4eWdrOWluNm9xcjJ6Nm1qYmdhamt2NW5rOXN4YWJ2ZGl2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TgChG0m8KSXr3obicS/giphy.gif"
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnI0aWoydXkyaGtwMmtxNGNkdmU3dXVzN2UydDNvZmxtejJ1ZHkxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q6GrUyDQoC78zmceKE/giphy.gif"
                 alt="Frog Maze gameplay"
                 class="game-gif"
               />
               <div class="front-content">
-                <small class="badge">Frog Maze</small>
+                <small class="badge">Personalized Recommender for eBay, Poshmark, and Depop</small>
                 <div class="description">
                   <div class="title">
-                    <p class="title"><strong>Frog Maze</strong></p>
+                    <p class="title"><strong>Personalized Recommender for eBay, Poshmark, and Depop</strong></p>
                   </div>
                   <p class="card-footer">30 Mins &nbsp; | &nbsp; 1 Serving</p>
                 </div>
@@ -142,8 +72,10 @@
             </div>
           </div>
         </div>
-
+      </a>
+       
         <!-- Redlining Zones Map Card -->
+        <a href="https://github.com/cs0320-s25/maps-ccadette-cinkum.git" target="_blank" class="card-link">
         <div class="card">
           <div class="content">
             <div class="back">
@@ -197,31 +129,55 @@
             </div>
           </div>
         </div>
-      </div>
+      </a>
+
+
+        
+      <a href="https://drive.google.com/file/d/1U4euvNvCEkqyy7Au4C8Xe0TMdwZXDebe/view?usp=drive_link" target="_blank" class="card-link">
+      <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <svg
+                  stroke="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  height="50px"
+                  width="50px"
+                  fill="#ffffff"
+                >
+                  <path
+                    d="M8.293 6.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L13.586 13 8.293 7.707a1 1 0 0 1 0-1.414z"
+                  />
+                </svg>
+                <strong>Frog Maze</strong>
+              </div>
+            </div>
+            <div class="front">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemtxOTJ4eWdrOWluNm9xcjJ6Nm1qYmdhamt2NW5rOXN4YWJ2ZGl2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TgChG0m8KSXr3obicS/giphy.gif"
+                alt="Frog Maze gameplay"
+                class="game-gif"
+              />
+              <div class="front-content">
+                <small class="badge">Frog Maze</small>
+                <div class="description">
+                  <div class="title">
+                    <p class="title"><strong>Frog Maze</strong></p>
+                  </div>
+                  <p class="card-footer">30 Mins &nbsp; | &nbsp; 1 Serving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+
+        </div>
     </div>
 
-    <script>
-      const slider = document.querySelector(".level");
-      const mainContent = document.querySelector(".main-content");
-      const sliderContainer = document.querySelector(".slider-container");
-
-      slider.addEventListener("input", (event) => {
-        const value = parseInt(event.target.value);
-        const translateY = 100 - value;
-
-        mainContent.style.transform = `translateY(${translateY}vh)`;
-        mainContent.style.opacity = value / 100;
-
-        if (value === 100) {
-          mainContent.classList.add("revealed");
-          setTimeout(() => {
-            sliderContainer.classList.add("hidden");
-          }, 500);
-        } else {
-          mainContent.classList.remove("revealed");
-          sliderContainer.classList.remove("hidden");
-        }
-      });
-    </script>
+    <script src="css/main.js"></script>
   </body>
 </html>

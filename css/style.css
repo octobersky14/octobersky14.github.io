@@ -1,7 +1,113 @@
+/* Add at the top of your existing CSS */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 body {
-  background-color: #fdf6e3;
+  background-color: #2e2e2e;
+  font-family: 'JetBrains Mono', monospace;  /* Updated font */
+  text-align: center;
+  color: #fff;
+}
+
+.slider-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.slider-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.nav-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #151515;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.nav-container.revealed {
+  opacity: 1;
+}
+
+.main-content {
+  opacity: 0;
+  transform: translateY(100vh);
+  transition: all 0.5s ease;
+  padding-top: 80px;
+}
+
+.main-content.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a703ff;  /* Using your purple accent color */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Update active link style to match */
+.nav-links .active {
+  color: #a703ff;
+}
+
+.nav-links .active::after {
+  transform: scaleX(1);
+  background-color: #a703ff;
+}
+body {
+  background-color: #2e2e2e;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
+  color: #fff;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 20px;
 }
 
 /* From Uiverse.io by seyed-mohsen-mousavi */
@@ -340,4 +446,61 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+}
+
+.profile-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-viewer {
+  width: 50%;
+  margin: 20px 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-content a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.main-content a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.main-content a:hover::after {
+  transform: scaleX(1);
+}
+
+/* For visited links */
+.main-content a:visited {
+  color: #fff;
 }
